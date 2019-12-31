@@ -3,9 +3,16 @@ exports.up = function(knex) {
     cars
       .string("vin")
       .unique()
-      .notNullable();
-    cars.string("model").notNullable();
-    cars.integer("mileage").notNullable();
+      .notNullable()
+      .defaultTo("adsf");
+    cars
+      .string("model")
+      .notNullable()
+      .defaultTo("adsf");
+    cars
+      .integer("mileage")
+      .notNullable()
+      .defaultTo("adsf");
   });
 };
 
